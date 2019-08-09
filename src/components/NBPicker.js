@@ -56,7 +56,6 @@ let NBPicker = class NBPicker extends Component {
             placeholder,
             iosIcon,
             pickerStyle,
-            pickerStyleDisabled,
             meta: { touched, error },
         } = this.props
         return (
@@ -99,7 +98,7 @@ let NBPicker = class NBPicker extends Component {
                         enabled={enabled}
                         {...input}
                         mode={this.props.mode}
-                        style={!enabled ? !pickerStyleDisabled ? { backgroundColor: '#E9ECEF' } : (pickerStyleDisabled) : (pickerStyle)}
+                        style={!enabled ? { backgroundColor: '#E9ECEF' } : (pickerStyle)}
                         selectedValue={input.value ? input.value : selectedValue}
                         textStyle={textStyle}
                         iosIcon={iosIcon}
